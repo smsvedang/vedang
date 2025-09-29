@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AapkaDost - Login</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to AapkaDost</h1>
+
+    <div class="auth-section">
+        <h2>Sign Up</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="date" id="dob" placeholder="Date of Birth">
+        <button onclick="signUp()">Sign Up</button>
+
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+
+        <h2>Or Login with Google</h2>
+        <button onclick="googleLogin()" class="google-btn">
+            <img src="https://i.postimg.cc/NM0QVNbr/g.png" alt="Google" class="google-logo">
+            Login with Google
+        </button>
+    </div>
+</div>
+</body>
+</html>

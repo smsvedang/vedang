@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AapkaDost - Admin</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Admin Panel</h1>
+    <input type="password" id="adminPass" placeholder="Enter Admin Password">
+    <button onclick="adminLogin()">Login as Admin</button>
+
+    <div id="adminContent" style="display:none; margin-top:20px;">
+        <h2>All Users</h2>
+        <div id="allUsers"></div>
+    </div>
+</div>
+</body>
+</html>

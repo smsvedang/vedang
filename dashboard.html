@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AapkaDost - Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to AapkaDost Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+
+    <div class="nav">
+        <button onclick="showSection('resources')">Resources</button>
+        <button onclick="showSection('chat')">Chat</button>
+        <button onclick="showSection('journal')">Journal</button>
+    </div>
+
+    <!-- Resources -->
+    <div id="resources" class="section">
+        <h2>Resources</h2>
+        <ul>
+            <li>Child Helpline: 1098</li>
+            <li>Mental Health Tips: <a href="https://www.mentalhealth.gov/">Visit</a></li>
+            <li>Emergency: 112</li>
+        </ul>
+    </div>
+
+    <!-- WhatsApp Chat -->
+    <div id="chat" class="section" style="display:none;">
+        <h2>Chat with us</h2>
+        <a href="https://wa.me/9100000000" target="_blank" class="whatsapp-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
+            Chat on WhatsApp
+        </a>
+    </div>
+
+    <!-- Journal -->
+    <div id="journal" class="section" style="display:none;">
+        <h2>My Journal</h2>
+        <textarea id="journalInput" placeholder="Write your thoughts here..."></textarea>
+        <button onclick="saveJournal()">Save</button>
+        <div id="journalDisplay"></div>
+    </div>
+</div>
+</body>
+</html>
