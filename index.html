@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AapkaDost - Login</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedang Soni's Academy | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to AapkaDost</h1>
-
-    <!-- Signup Section -->
-    <div class="auth-section">
-      <h2>Signup</h2>
-      <input type="email" id="signupEmail" placeholder="Enter email">
-      <input type="password" id="signupPassword" placeholder="Enter password">
-      <button id="signupBtn">Signup</button>
-    </div>
-
-    <!-- Login Section -->
-    <div class="auth-section">
-      <h2>Login</h2>
-      <input type="email" id="loginEmail" placeholder="Enter email">
-      <input type="password" id="loginPassword" placeholder="Enter password">
-      <button id="loginBtn">Login</button>
-    </div>
-
-    <!-- Google Login -->
-    <div class="auth-section">
-      <button id="googleLogin" class="google-btn">
-        <img src="https://i.postimg.cc/NM0QVNbr/g.png"
-             alt="Google" class="google-logo">
-        Login with Google
-      </button>
-    </div>
-
-  <!-- Firebase Auth JS -->
-  <script type="module" src="app.js"></script>
+    <header>
+        <nav>
+            <div class="logo">Vedang Soni's Academy</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="portal.html">Student Portal</a></li>
+                <li><a href="my-courses.html">My Courses</a></li>
+                 <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Unlock Your Potential with Vedang Soni</h1>
+                <p>Expert guidance to help you achieve your academic goals.</p>
+                <a href="courses.html" class="btn">Explore Courses</a>
+            </div>
+        </section>
+        <section class="features">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card"><h3>Live Interactive Classes</h3><p>Engaging live classes on <strong>Arattai Messenger</strong> for real-time interaction.</p></div>
+                <div class="feature-card"><h3>Comprehensive Notes</h3><p>Get well-structured notes for every topic.</p></div>
+                <div class="feature-card"><h3>Regular Homework & Tests</h3><p>Consistent assignments to track your progress.</p></div>
+            </div>
+        </section>
+    </main>
+    <footer><p>&copy; 2025 Vedang Soni's Academy. All Rights Reserved.</p></footer>
+    <script src="script.js"></script>
 </body>
 </html>

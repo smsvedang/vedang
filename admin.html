@@ -1,22 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AapkaDost - Admin</title>
-<link rel="stylesheet" href="styles.css">
-<script type="module" src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1>Admin Panel</h1>
-    <input type="password" id="adminPass" placeholder="Enter Admin Password">
-    <button onclick="adminLogin()">Login as Admin</button>
+<div class="admin-wrapper">
 
-    <div id="adminContent" style="display:none; margin-top:20px;">
-        <h2>All Users</h2>
-        <div id="allUsers"></div>
+    <aside class="sidebar">
+        <div class="logo">Admin Panel</div>
+        <ul class="sidebar-nav">
+            <li><a href="#" class="nav-link active" data-target="students-section">Students</a></li>
+            <li><a href="#" class="nav-link" data-target="courses-section">Courses</a></li>
+            <li><a href="#" class="nav-link" data-target="enrollments-section">Enrollments</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+
+        <section id="students-section" class="content-section active">
+            <h1 class="page-title">Registered Students</h1>
+            <div class="admin-table-container">
+                <table id="students-table">
+                    <thead><tr><th>Name</th><th>Email</th><th>Registration Date</th></tr></thead>
+                    <tbody id="students-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="courses-section" class="content-section">
+            <h1 class="page-title">Manage Courses</h1>
+            <div class="toolbar"><button id="add-course-btn" class="btn">Add New Course</button></div>
+            <div id="course-form-container" class="form-container hidden">
+                <form id="course-form">
+                    <h2 id="form-title">Add New Course</h2>
+                    <div class="form-group"><label for="title">Course Title</label><input type="text" id="course-title" required></div>
+                    <div class="form-group"><label for="description">Description</label><textarea id="course-description" rows="4" required></textarea></div>
+                    <div class="form-group"><label for="price">Price (INR)</label><input type="number" id="course-price" required></div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn">Save Course</button>
+                        <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="admin-table-container">
+                <table id="courses-table">
+                    <thead><tr><th>Title</th><th>Price</th><th>Actions</th></tr></thead>
+                    <tbody id="courses-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="enrollments-section" class="content-section">
+            <h1 class="page-title">Pending Enrollment Requests</h1>
+            <div class="admin-table-container">
+                <table id="enrollments-table">
+                    <thead><tr><th>Student Name</th><th>Email</th><th>Course</th><th>Action</th></tr></thead>
+                    <tbody id="enrollments-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    </div>
+
+<div id="content-modal" class="modal-backdrop hidden">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modal-course-title">Manage Content for...</h2>
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="add-content-form">
+                <h3>Add New Content</h3>
+                <div class="form-group">
+                    <label for="content-title">Content Title</label>
+                    <input type="text" id="content-title" placeholder="e.g., Chapter 1 Video">
+                </div>
+                <div class="form-group">
+                    <label for="content-type">Content Type</label>
+                    <select id="content-type">
+                        <option value="video">Video</option>
+                        <option value="pdf">PDF</option>
+                        <option value="link">Link</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="content-url">URL</label>
+                    <input type="url" id="content-url" placeholder="e.g., https://youtube.com/watch?v=...">
+                </div>
+                <button type="submit" class="btn">Add Content</button>
+            </form>
+            <hr>
+            <h3>Current Content</h3>
+            <div id="current-content-list">
+                <p>No content added yet.</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="save-content-btn" class="btn">Save All Changes</button>
+        </div>
     </div>
 </div>
+<script src="admin.js"></script>
 </body>
 </html>

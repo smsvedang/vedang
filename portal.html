@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Vedang Soni's Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vedang Soni's Academy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="portal.html" class="active">Student Portal</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+             <div class="burger">
+                <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 class="page-title">Student Login</h1>
+        <form class="login-form" id="login-form">
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" required></div>
+            <div class="form-group"><label for="password">Password</label><input type="password" id="password" required></div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </main>
+    <footer><p>&copy; 2025 Vedang Soni's Academy. All Rights Reserved.</p></footer>
+    <script src="script.js"></script>
+    <script src="auth.js" defer></script>
+</body>
+</html>
